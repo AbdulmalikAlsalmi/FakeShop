@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "Default": "Server=ServerName;Database=FakeShopDB;Encrypt=False;Trusted_Connection=True;"
+  }
+}
