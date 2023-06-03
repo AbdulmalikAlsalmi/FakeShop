@@ -10,6 +10,15 @@ namespace FakeShop.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: "AllowesCorsOrrigin",
+                                    policy =>
+                                    {
+                                        policy.WithOrigins("http://localhost:1234");
+                                    });
+            });
+
             // Add services to the container.
             builder.Services.AddScoped<IItemRepository, ItemRepository>();
             builder.Services.AddControllers();
