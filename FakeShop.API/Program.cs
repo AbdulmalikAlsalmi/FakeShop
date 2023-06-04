@@ -20,7 +20,7 @@ namespace FakeShop.API
             });
 
             // Add services to the container.
-            builder.Services.AddScoped<ItemRepository, ItemRepository>();
+            builder.Services.AddScoped<IItemRepository, ItemRepository>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

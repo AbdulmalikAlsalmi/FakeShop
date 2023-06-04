@@ -1,4 +1,5 @@
 ﻿using FakeShop.Core.Entities;
+using FakeShop.Core.Repositories;
 using FakeShop.Infra.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,9 +12,9 @@ namespace FakeShop.API.Controllers
     [ApiController]
     public class ItemsController : ControllerBase
     {
-        private readonly ItemRepository itemRepository;
+        private readonly IItemRepository itemRepository;
 
-        public ItemsController(ItemRepository _itemRepository)
+        public ItemsController(IItemRepository _itemRepository)
         {
             this.itemRepository = _itemRepository;
         }
