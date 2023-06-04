@@ -15,7 +15,7 @@ namespace FakeShop.API
                 options.AddPolicy(name: "AllowesCorsOrrigin",
                                     policy =>
                                     {
-                                        policy.WithOrigins("http://localhost:1234");
+                                        policy.WithOrigins("http://localhost:4200");
                                     });
             });
 
